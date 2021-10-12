@@ -7,9 +7,17 @@ const NewQuestion = () => {
     const dispatch = useDispatch()
 
     const submitHandler = (event) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "qna", question: enteredQuestion })
+          })
+            .then(() => console.log("Success!"))
+            .catch(error => console.error(error));
+    
         event.preventDefault();
-        onSubmit()
         if (!questionIsValid) return;
+        onSubmit()
         dispatch(questionActions.addQuestion(enteredQuestion))
         resetQuestion()
     }
