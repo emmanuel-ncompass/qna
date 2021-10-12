@@ -1,0 +1,38 @@
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #eee;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.filters span {
+    font-weight: bold;
+}
+
+.sort input {
+    vertical-align:baseline;
+}
+
+.filters input {
+    margin-left: 10px;
+}
+
+.filters button { font-weight: bold;}
+
+.active {
+    background-color: white;
+    border-color: orange;
+    color: orange;
+    font-weight: bold;
+}
